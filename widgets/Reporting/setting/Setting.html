@@ -1,0 +1,25 @@
+<div>
+	<div>${nls.addTaskTip}</div>
+	<div style="width:100%;position:relative;margin-top:10px;bottom:0;">
+		<div>${nls.addPrintService}</div>
+		<span data-dojo-attach-point="printTextBox" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='required:true,trim:true' style="width:75%;margin-bottom:5px;"></span>
+		<div>${nls.addFirstLine}</div>
+		<span data-dojo-attach-point="fLineTextBox" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='required:true,trim:true' style="width:75%;margin-bottom:5px;"></span>
+		<div>${nls.addSecondLine}</div>
+		<span data-dojo-attach-point="sLineTextBox" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='required:true,trim:true' style="width:75%;margin-bottom:5px;"></span>
+	</div>
+	<div class="content">
+		<div class="items-list jimu-not-selectable">
+			<div class="add-btn" data-dojo-attach-point="addButton" data-dojo-attach-event="click:_onBtnAddItemClicked">
+				<div class="icon"></div>
+				<div class="tip">${nls.addLayer}</div>
+			</div>
+			<div class="items-list-content" data-dojo-attach-point="listContent" data-dojo-attach-event="click:_onListContentClicked"></div>
+		</div>
+		<div class="separator not-visible" data-dojo-attach-point="separator" style="display:none;"></div>
+		<div class="single-setting-content" data-dojo-attach-point="singleSettingContent">
+			<div class="no-task-tip" data-dojo-attach-point="noTaskTip"></div>
+		</div>
+	</div>
+	<div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-props='hidden:true'></div>
+</div>

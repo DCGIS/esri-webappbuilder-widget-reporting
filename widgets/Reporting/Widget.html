@@ -1,0 +1,105 @@
+<div data-dojo-type="dijit/form/Form" data-dojo-attach-point="reportingFormDijit" data-dojo-props="style:'width:100%;text-align: center;'">
+    <table data-dojo-attach-point="dateRangeTable" style="width:100%;border-collapse:collapse;margin:10px;">
+  		<tbody>
+        <tr>
+          <td style="width:30%;text-align:center;">
+  					<span>Report Type</span>
+  				</td>
+          <td style="width:100%;padding:5px 0px;">
+            <input type="select" data-dojo-type="dijit/form/Select"  data-dojo-props="name:'reportType',style:'width:75%;margin: 0 auto;text-align: center;'"
+              data-dojo-attach-point="reportTypeDijit"
+              data-dojo-attach-event="Change:selectReportType"/>
+          </td>
+        </tr>
+  			<tr data-dojo-attach-point="startDateRow">
+          <td style="width:30%;text-align:center;">
+  					<span>Start Date</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;">
+            <input data-dojo-attach-point="startDate" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='required:false,trim:true' style="width:75%;" />
+          </td>
+        </tr>
+        <tr data-dojo-attach-point="endDateRow">
+  				<td style="width:30%;text-align:center;">
+  					<span>End Date</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;">
+            <input data-dojo-attach-point="endDate" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='value:new Date(),required:false,trim:true' style="width:75%;" />
+  				</td>
+  			</tr>
+        <tr data-dojo-attach-point="aaRow">
+  				<td style="width:30%;text-align:center;">
+  					<span>Address Authority</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;" data-dojo-attach-point="aaDiv">
+  				</td>
+  			</tr>
+        <tr data-dojo-attach-point="statusRow">
+  				<td style="width:30%;text-align:center;">
+  					<span>Status</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;" data-dojo-attach-point="statusDiv">
+  				</td>
+  			</tr>
+        <tr>
+          <td style="width:30%;text-align:center;">
+  					<span>Report Format</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;">
+            <input type="select" data-dojo-type="dijit/form/Select" data-dojo-props="name:'reportFormat',style:'width:75%;margin: 0 auto;text-align: center;'"
+              data-dojo-attach-point="reportFormatDijit"
+              data-dojo-attach-event="Change:selectReportFormat"/>
+  				</td>
+        </tr>
+        <tr data-dojo-attach-point="commentsDiv">
+  				<td style="width:30%;text-align:center;">
+  					<span>Comments</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;">
+            <input data-dojo-attach-point="comments" style="width:75%;max-width:216px;" data-dojo-type="dijit/form/SimpleTextarea" />
+  				</td>
+  			</tr>
+        <tr data-dojo-attach-point="includeMapCheckBoxRow">
+          <td style="width:30%;text-align:center;">
+            <span>Include a map?</span>
+          </td>
+          <td>
+            <div data-dojo-type="jimu/dijit/CheckBox"
+              data-dojo-attach-point="includeMapCheckBox"
+              data-dojo-props="checked:false">
+            </div>
+          </td>
+        </tr>
+  		</tbody>
+  	</table>
+    <div data-dojo-attach-point="drawRow" style="margin-left: 17px;">
+      <label>${i18n.drawFeaturesLabel}</label>
+      <div data-dojo-attach-point="drawDiv">
+      </div>
+    </div>
+    <div class="message" data-dojo-attach-point="messageNode"></div>
+    <div class="get-features" data-dojo-attach-point="queryButtonDiv">
+      <a class="jimu-btn" href="javascript:void(0)" data-dojo-attach-point="queryButton" data-dojo-attach-event="onClick: getFeatures">${i18n.getFeatures}
+      </a>
+    </div>
+    <table data-dojo-attach-point="generateReportTable" style="width:100%;border-collapse:collapse;margin:10px;">
+  		<tbody>
+        <tr data-dojo-attach-point="reportNameDiv">
+  				<td style="width:39%;text-align:center;">
+  					<span>Report Name</span>
+  				</td>
+  				<td style="width:100%;padding:5px 0px;">
+            <input data-dojo-attach-point="reportName" style="width:100%;" data-dojo-type="dijit/form/TextBox"/>
+  				</td>
+  			</tr>
+      </tbody>
+    </table>
+    <div class="generate-report" data-dojo-attach-point="generateButtonDiv">
+      <a class="jimu-btn" href="javascript:void(0)" data-dojo-attach-point="generateButton" data-dojo-attach-event="onClick: generateReport">${i18n.genReport}
+      </a>
+    </div>
+    <div class="clear-features" data-dojo-attach-point="clearButtonDiv">
+      <a class="jimu-btn" href="javascript:void(0)" data-dojo-attach-point="clearButton" data-dojo-attach-event="onClick: clearSelectedFeatures">${i18n.clearFeatures}
+      </a>
+    </div>
+</div>

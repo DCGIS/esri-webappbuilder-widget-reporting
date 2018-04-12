@@ -1,0 +1,131 @@
+<div>
+	<table>
+		<colgroup>
+			<col width="100"></col>
+			<col width="auto"></col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<td>${jimuNls.common.layer}</td>
+				<td data-dojo-attach-point="layerTd"></td>
+			</tr>
+			<tr>
+				<td>${nls.dateField}</td>
+				<td>
+					<div data-dojo-attach-point="dateField" data-dojo-type="dijit/form/Select" data-dojo-props='required:true,trim:true' style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>${nls.aaField}</td>
+				<td>
+					<div data-dojo-attach-point="aaField" data-dojo-type="dijit/form/Select" data-dojo-props='required:true,trim:true' style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>${nls.proposedField}</td>
+				<td>
+					<div data-dojo-attach-point="proposedField" data-dojo-type="dijit/form/Select" data-dojo-props='required:true,trim:true' style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>${nls.proposedFieldText}</td>
+				<td>
+					<div data-dojo-attach-point="proposedQueryValue" data-dojo-type="dijit/form/TextBox" data-dojo-props='required:true,trim:true' style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>${nls.reportLogoText}</td>
+				<td>
+					<div class="click-picker" data-dojo-attach-event="click:_onImageChooserDivClicked">
+						<div data-dojo-type="jimu/dijit/ImageChooser" data-dojo-attach-point="imageChooser" data-dojo-props="cropImage:true,showSelfImg:true,goldenWidth:16,goldenHeight:16,format:['image/gif','image/png','image/jpeg']" class="jimu-float-leading" style="width:16px;height:16px;"></div>
+						<div class="separator jimu-float-leading"></div>
+						<div class="jimu-icon jimu-icon-down-arrow-8 jimu-float-leading"></div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div style="margin-top:10px;">
+		<div><b>${nls.addField}</b></div>
+		<table style="width:100%">
+			<tr>
+				<td>
+					<div data-dojo-attach-point="fieldsDiv"></div>
+				</td>
+				<td>
+					<div data-dojo-attach-point="addFieldBtn">
+						<div class="add-field" data-dojo-attach-event="click:_onBtnFieldClicked">
+							<div class="icon"></div>
+							<div class="tip">${nls.addFieldBtnTxt}</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<table style="margin-top:10px;width:100%;">
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Header
+			</th>
+			<th>
+				Width (%)
+			</th>
+		</tr>
+		<tbody data-dojo-attach-point="fieldsTable">
+		</tbody>
+	</table>
+
+	<div style="margin-top:10px;font-size:0.8em;">${nls.csvInstructionText}</div>
+	<div style="margin-top:10px;">
+		<table style="width:100%">
+			<tr>
+				<td>
+					<div data-dojo-attach-point="addCsvFieldsBtn">
+						<div class="add-field" data-dojo-attach-event="click:_onCsvBtnClicked">
+							<div class="icon"></div>
+							<div class="tip">${nls.addCsvBtnTxt}</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div style="margin-top:10px;" data-dojo-attach-point="addCsvFieldsDiv">
+		<div><b>${nls.addCsvFields}</b></div>
+		<table style="width:100%">
+			<tr>
+				<td>
+					<div data-dojo-attach-point="csvFieldsDiv"></div>
+				</td>
+				<td>
+					<div data-dojo-attach-point="addFieldCsvBtn">
+						<div class="add-field" data-dojo-attach-event="click:_onCsvBtnFieldClicked">
+							<div class="icon"></div>
+							<div class="tip">${nls.addFieldBtnTxt}</div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<table style="margin-top:10px;width:100%;" data-dojo-attach-point="csvFieldsTableEle">
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Header
+			</th>
+		</tr>
+		<tbody data-dojo-attach-point="csvFieldsTable">
+		</tbody>
+	</table>
+
+</div>
